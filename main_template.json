@@ -14,7 +14,7 @@
 			"defaultValue": "192.168.120.0/24",
 			"type": "String",
 			"metadata": {"description": "The IP range (in CIDR notation) to be used for the Management VNet. Specify a class C CIDR (/24). Example: 192.168.120.0/24"}
-		}	
+		},	
 		"ManagementVnetSubnetCIDR": {
 			"defaultValue": "192.168.120.16/28",
 			"type": "String",
