@@ -83,12 +83,20 @@ To delegate Azure API permissions to the web application:
 ![Keys Area](https://raw.githubusercontent.com/QualiSystems/Azure-POC-Template/master/images/keys.png)
 6. Copy and store the secret key somewhere you'll remember. The CloudShell App will need it for authentication with Azure. Note: The key is displayed only once and will disappear when you leave this page.
 7. You will also need the tenant. In the black banner at the bottom of the page, click View Endpoints and copy the tenant from the OAuth 2.0 Authorization Endpoint field (as indicated in the image below) and store it somewhere you'll remember.
+
 ![Authorization](https://raw.githubusercontent.com/QualiSystems/Azure-POC-Template/master/images/oauth-authorization.png)
+
 8. In the permissions to other applications area, grant delegated permissions to your web application to allow it to access other Azure resources.
     1. Click Add application.
+
+![Add Application](https://raw.githubusercontent.com/QualiSystems/Azure-POC-Template/master/images/add-application.png)
+
     2. In the window that is displayed, click Windows Azure Service Management API.
     3. Click Complete.
     4. In the Windows Azure Service Management API row, click the Delegated Permissions dropdown list and make sure the Access Azure Service Management as organization users (preview) check box is selected.
+
+![App Permissions ](https://raw.githubusercontent.com/QualiSystems/Azure-POC-Template/master/images/app-permissions.png)
+
     5. Click Save at the bottom of the page.
 
 Proceed to the next section to configure the web application as Contributor.
@@ -107,5 +115,8 @@ Note: If you don't see the Roles blade, clear your browser's cache and refresh t
 5. Click Add
 6. In the Add access blade, click Select a role and select the Contributor role.
 7. In the Add users blade, search for the web application you created in Add an Azure web application and select it.
+
+![Add Users ](https://raw.githubusercontent.com/QualiSystems/Azure-POC-Template/master/images/add-users.png)
+
 8. Click Select at the bottom of the blade.
 9. Click OK at the bottom of the Add access blade.
