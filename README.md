@@ -87,9 +87,7 @@ In this section we'll delegate Azure API permissions to the web application we'v
 ![Keys Area](https://raw.githubusercontent.com/QualiSystems/Azure-POC-Template/master/images/keys.png)
 6. [**Save for later use**] Copy and store the secret key somewhere you'll remember. The CloudShell App will need it for authentication with Azure. Note: The key is displayed only once and will disappear when you leave this page.
 7. [**Save for later use**] You will also need the tenant. In the black banner at the bottom of the page, click View Endpoints and copy the tenant from the OAuth 2.0 Authorization Endpoint field (as indicated in the image below) and store it somewhere you'll remember.
-
 ![Authorization](https://raw.githubusercontent.com/QualiSystems/Azure-POC-Template/master/images/oauth-authorization.png)
-
 8. In the permissions to other applications area, grant delegated permissions to your web application to allow it to access other Azure resources.
     1. Click Add application.
 ![Add Application](https://raw.githubusercontent.com/QualiSystems/Azure-POC-Template/master/images/add_application.png)
