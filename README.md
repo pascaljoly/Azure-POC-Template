@@ -90,9 +90,7 @@ To delegate Azure API permissions to the web application:
 
 8. In the permissions to other applications area, grant delegated permissions to your web application to allow it to access other Azure resources.
     1. Click Add application.
-
 ![Add Application](https://raw.githubusercontent.com/QualiSystems/Azure-POC-Template/master/images/add_application.png)
-
     2. In the window that is displayed, click Windows Azure Service Management API.
     3. Click Complete.
     4. In the Windows Azure Service Management API row, click the Delegated Permissions dropdown list and make sure the Access Azure Service Management as organization users (preview) check box is selected.
