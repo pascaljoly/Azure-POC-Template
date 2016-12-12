@@ -25,3 +25,24 @@ As seen in the above diagram this template will create the following elements in
 6. Peering between the CloudShell Sandboxes VNET and the CloudShell Mgmnt VNET
 
 Note that additional VMs may be dynamically allocated for each sandbox.
+
+## Configure Azure API to work with CloudShell
+
+CloudShell Apps communicate with Azure using the Azure API. However, to enable the two platforms to work with each other, you need to add a web application that has permissions to use the Azure API.
+
+This configuration is a three-step process:
+1. Add an Azure web application
+2. Delegate Azure API permissions to the web application
+3. Configure the web application as Contributor
+
+Add an Azure web application
+
+To add an Azure web application:
+
+![Deployment Architecture](https://github.com/QualiSystems/Azure-POC-Template/raw/master/POC_CloudShell_AZURE_ARCH.png)
+
+1. Log in to https://portal.azure.com.
+2. From the left pane, select Subscriptions and make sure you have an active subscription.
+3. Make sure your subscription has the appropriate permissions.
+
+a. From the user menu, click My permissions.
