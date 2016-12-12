@@ -33,6 +33,7 @@ Note that additional VMs may be dynamically allocated for each sandbox.
 CloudShell Apps communicate with Azure using the Azure API. However, to enable the two platforms to work with each other, you need to add a web application that has permissions to use the Azure API.
 
 This configuration is a three-step process:
+
 1. Add an Azure web application
 2. Delegate Azure API permissions to the web application
 3. Configure the web application as Contributor
