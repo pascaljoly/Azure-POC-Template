@@ -61,7 +61,7 @@ To add an Azure web application:
         * Microsoft.Storage
         * Microsoft.ADHybridHealthService
         * Microsoft.OperationalInsights
-4. Return to the Subscriptions blade, and copy and store the Subscription ID somewhere you'll remember.
+4. [**Save for later use**] Return to the Subscriptions blade, and copy and store the Subscription ID somewhere you'll remember.
 5. Access the Azure Classic Portal at https://manage.windowsazure.com/.
 6. From the left pane, select Active Directory and then click the directory containing your subscription.
 7. In the directory's page, click the Applications menu and then click the Add button at the bottom.
