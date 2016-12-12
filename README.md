@@ -96,7 +96,6 @@ In this section we'll delegate Azure API permissions to the web application we'v
     4. In the Windows Azure Service Management API row, click the Delegated Permissions dropdown list and make sure the Access Azure Service Management as organization users (preview) check box is selected.
 
 ![App Permissions ](https://raw.githubusercontent.com/QualiSystems/Azure-POC-Template/master/images/app_permissions.png)
-
     5. Click Save at the bottom of the page.
 
 Proceed to the next section to configure the web application as Contributor.
