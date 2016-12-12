@@ -78,9 +78,7 @@ In this section we'll delegate Azure API permissions to the web application we'v
 
 1. Return to the Azure Classic Portal at https://manage.windowsazure.com/.
 2. In the directory containing your subscription, click the web application and then click the Configure menu. The Configure page is displayed.
-
 ![App Configured](https://raw.githubusercontent.com/QualiSystems/Azure-POC-Template/master/images/app_configured.png)
-
 3. [**Save for later use**] From the properties area, copy and store the Client Id somewhere you'll remember.
 4. In the keys area, add a new secret key (for 2 years).
 5. Click Save at the bottom of the page. The key is displayed in the keys area.
@@ -94,7 +92,6 @@ In this section we'll delegate Azure API permissions to the web application we'v
     2. In the window that is displayed, click Windows Azure Service Management API.
     3. Click Complete.
     4. In the Windows Azure Service Management API row, click the Delegated Permissions dropdown list and make sure the Access Azure Service Management as organization users (preview) check box is selected.
-
 ![App Permissions ](https://raw.githubusercontent.com/QualiSystems/Azure-POC-Template/master/images/app_permissions.png)
     5. Click Save at the bottom of the page.
 
