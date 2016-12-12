@@ -37,6 +37,8 @@ This configuration is a three-step process:
 2. Delegate Azure API permissions to the web application
 3. Configure the web application as Contributor
 
+During the Azure configuration process below you'll obtain a **tenant** and a **secret** key which, along with your subscription ID and client ID you'll need to configure CloudShelll. Please pay attention in the steps below to the instructions regarding these important values. 
+
 ### Add an Azure web application
 
 To add an Azure web application:
@@ -71,20 +73,19 @@ To add an Azure web application:
 
 ### Delegate Azure API permissions to the web application
 
-To delegate Azure API permissions to the web application:
-
+In this section we'll delegate Azure API permissions to the web application we've created. Make sure you save the values mentioned in the steps marked [**Save for later use**] you may not get a chance to retrieve those values again at a later time.
 
 1. Return to the Azure Classic Portal at https://manage.windowsazure.com/.
 2. In the directory containing your subscription, click the web application and then click the Configure menu. The Configure page is displayed.
 
 ![App Configured](https://raw.githubusercontent.com/QualiSystems/Azure-POC-Template/master/images/app_configured.png)
 
-3. From the properties area, copy and store the Client Id somewhere you'll remember.
+3. [**Save for later use**] From the properties area, copy and store the Client Id somewhere you'll remember.
 4. In the keys area, add a new secret key (for 2 years).
 5. Click Save at the bottom of the page. The key is displayed in the keys area.
 ![Keys Area](https://raw.githubusercontent.com/QualiSystems/Azure-POC-Template/master/images/keys.png)
-6. Copy and store the secret key somewhere you'll remember. The CloudShell App will need it for authentication with Azure. Note: The key is displayed only once and will disappear when you leave this page.
-7. You will also need the tenant. In the black banner at the bottom of the page, click View Endpoints and copy the tenant from the OAuth 2.0 Authorization Endpoint field (as indicated in the image below) and store it somewhere you'll remember.
+6. [**Save for later use**] Copy and store the secret key somewhere you'll remember. The CloudShell App will need it for authentication with Azure. Note: The key is displayed only once and will disappear when you leave this page.
+7. [**Save for later use**] You will also need the tenant. In the black banner at the bottom of the page, click View Endpoints and copy the tenant from the OAuth 2.0 Authorization Endpoint field (as indicated in the image below) and store it somewhere you'll remember.
 
 ![Authorization](https://raw.githubusercontent.com/QualiSystems/Azure-POC-Template/master/images/oauth-authorization.png)
 
@@ -122,3 +123,6 @@ Note: If you don't see the Roles blade, clear your browser's cache and refresh t
 9. Click OK at the bottom of the Add access blade.
 
 ### CloudShell Installation
+
+Please contact a Quali representative to continue the installation process.
+
