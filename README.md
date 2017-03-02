@@ -41,6 +41,7 @@ This configuration is a three-step process:
 During the Azure configuration process you'll obtain a **tenant** and a **secret** key which, along with your subscription ID and client ID you'll need to configure CloudShelll. Please pay attention in the steps below to the instructions regarding these important values. 
 
 Please follow the link below for detailed configuration instructions:
+
 <a href="http://help.quali.com/Online%20Help/8.0.0.7003/Portal/Content/Admn/Azure-Cnfg-API.htm" target="_blank" />Configure Azure API to work with CloudShell (CloudShell 8.0 EA Online Help)</a>
 
 ### CloudShell Installation
