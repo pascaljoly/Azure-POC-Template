@@ -8,7 +8,7 @@
         },
         "CloudshellSSHPassword": {
             "type": "securestring",
-			"metadata": {"description": "The CloudShell SSH user’s password."}
+			"metadata": {"description": "The CloudShell SSH userï¿½s password."}
         },			
 		"ManagementVnetCIDR": {
 			"defaultValue": "192.168.120.0/24",
@@ -18,7 +18,7 @@
 		"ManagementVnetSubnetCIDR": {
 			"defaultValue": "192.168.120.16/28",
 			"type": "String",
-			"metadata": {"description": "The IP range (in CIDR notation) of the subnet to be used by the Management VNet. This range must be included in the Management VNet’s range. This subnet is used by CloudShell components such as QualiX Server and TestShell Execution Server. Example: 192.168.120.16/28"}
+			"metadata": {"description": "The IP range (in CIDR notation) of the subnet to be used by the Management VNet. This range must be included in the Management VNetï¿½s range. This subnet is used by CloudShell components such as QualiX Server and TestShell Execution Server. Example: 192.168.120.16/28"}
 		},			
 		"DeploymentMode":{
 			"type":"string",
@@ -45,7 +45,7 @@
 		"location": "[resourceGroup().location]",
 		"es_nic_name":"QualiNic",
 		"virtualMachineEsName": "Quali-vm",
-		"qx_template_location":"https://raw.githubusercontent.com/QualiSystems/Azure-POC-Template/master/",
+		"qx_template_location":"https://s3-us-west-2.amazonaws.com/qualix-ova/guacamole-quali-install.sh",
 		"qualixscriptUrl":"https://raw.githubusercontent.com/QualiSystems/Azure-Shell/develop/deployment_templates/guacamole-quali-install.sh",
 		"commandToExe":"sh guacamole-quali-install.sh",
 		"vmSize":"Standard_A3",
