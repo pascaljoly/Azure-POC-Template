@@ -44,12 +44,6 @@
       }
     },
 
-    "SubnetRef": {
-      "type": "string",
-      "metadata": {
-        "description": "Vm Size to use"
-      }
-    }
     
 
   },
@@ -64,7 +58,10 @@
       "True": "[variables('defaultNSGName')]",
       "False": "[parameters('NSGName')]"
     },
-    "nsgNameActual" : "[variables('nsgNameMap')[variables('useDefaultNsg')]]"
+    "nsgNameActual" : "[variables('nsgNameMap')[variables('useDefaultNsg')]]",
+    "vnetID": "[resourceId('Microsoft.Network/virtualNetworks',parameters('VNetName'))]",
+    "SubnetRef": "[concat(variables('vnetID'),'/subnets/','default')]",
+  
 
   },
   "resources": [
@@ -138,7 +135,7 @@
             "name": "ipconfig1",
             "properties": {
               "subnet": {
-                "id": "[parameters('SubnetRef')]"
+                "id": "[variables('SubnetRef')]"
               },
               "privateIPAllocationMethod": "Dynamic",
               "publicIpAddress": {

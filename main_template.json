@@ -57,8 +57,6 @@
     "publicIpAddressNameQualiVM": "quali_ip",
     "defaultNSGName": "NSG-Quali",
     "portalNsgName": "NSG-Portal",
-    "vnetID": "[resourceId('Microsoft.Network/virtualNetworks',variables('virtualNetworks_mgmt_vnet_name'))]",
-    "SubnetRef": "[concat(variables('vnetID'),'/subnets/','default')]",
     "storageAccountFullName" : "[concat('Microsoft.Storage/storageAccounts/', variables('storageAccountName'))]",
     "mgmtVNetFullName" : "[concat('Microsoft.Network/virtualNetworks/', variables('virtualNetworks_mgmt_vnet_name'))]"
   },
@@ -134,8 +132,7 @@
           "SSHUser": { "value": "[parameters('CloudShellVMsAdminUser')]" },
           "SSHPassword": { "value": "[parameters('CloudShellVMsAdminPassword')]" },
           "VMSize": { "value": "[variables('vmSize')]" },
-          "VNetName": { "value": "[reference(variables('mgmtVNetFullName')).name]" },
-          "SubnetRef" : "[variables('SubnetRef')]"
+          "VNetName": { "value": "[reference(variables('mgmtVNetFullName')).name]" }
 
         }
       }
@@ -160,9 +157,7 @@
           "SSHPassword": { "value": "[parameters('CloudShellVMsAdminPassword')]" },
           "VMSize": { "value": "[variables('vmSize')]" },
           "VNetName": { "value": "[reference(variables('mgmtVNetFullName')).name]" },
-          "NSGName": { "value": "[variables('portalNsgName')]" },
-          "SubnetRef" : "[variables('SubnetRef')]"
-
+          "NSGName": { "value": "[variables('portalNsgName')]" }
         }
       }
     },
