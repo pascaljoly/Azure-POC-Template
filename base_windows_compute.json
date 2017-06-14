@@ -90,7 +90,7 @@
           "osDisk": {
             "name": "[parameters('VirtualMachineName')]",
             "vhd": {
-              "uri": "[concat(concat(reference(resourceId('Microsoft.Storage/storageAccounts', parameters('StorageAccountName')), '2015-06-15').primaryEndpoints['blob'], 'vhds/'), parameters('VirtualMachineName'), '2016102316823.vhd')]"
+              "uri": "[concat(concat(reference(resourceId('Microsoft.Storage/storageAccounts/', parameters('StorageAccountName')), '2015-06-15').primaryEndpoints['blob'], 'vhds/'), parameters('VirtualMachineName'), '2016102316823.vhd')]"
             },
             "createOption": "FromImage"
           },
