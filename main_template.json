@@ -107,9 +107,9 @@
         "parameters": {
           "ManagementVnetCIDR": { "value": "[parameters('ManagementVnetCIDR')]" },
           "ManagementVnetSubnetCIDR": { "value": "[parameters('ManagementVnetSubnetCIDR')]" },
-          "MGMTVNetName": { "value": "[reference(variables('virtualNetworks_mgmt_vnet_name')).name]" },
-          "SandboxVNetName": { "value": "[reference(variables('virtualNetworks_sandbox_vnet_name')).name]" },
-          "StorageAccountName": { "value": "[reference(variables('storageAccountName')).name]" }
+          "MGMTVNetName": { "value": "[variables('virtualNetworks_mgmt_vnet_name')]" },
+          "SandboxVNetName": { "value": "[variables('virtualNetworks_sandbox_vnet_name')]" },
+          "StorageAccountName": { "value": "[variables('storageAccountName').name]" }
 
         
       }
@@ -134,7 +134,9 @@
           "SSHUser": { "value": "[parameters('CloudShellVMsAdminUser')]" },
           "SSHPassword": { "value": "[parameters('CloudShellVMsAdminPassword')]" },
           "VMSize": { "value": "[variables('vmSize')]" },
-          "VNetName": { "value": "[reference(variables('virtualNetworks_mgmt_vnet_name')).name]" }
+          "VNetName": { "value": "[reference(variables('mgmtVNetFullName')).name]" },
+          "SubnetRef" : "[variables('SubnetRef')]"
+
         }
       }
     },
@@ -157,8 +159,10 @@
           "SSHUser": { "value": "[parameters('CloudShellVMsAdminUser')]" },
           "SSHPassword": { "value": "[parameters('CloudShellVMsAdminPassword')]" },
           "VMSize": { "value": "[variables('vmSize')]" },
-          "VNetName": { "value": "[reference(variables('virtualNetworks_mgmt_vnet_name')).name]" },
-          "NSGName": { "value": "[variables('portalNsgName')]" }
+          "VNetName": { "value": "[reference(variables('mgmtVNetFullName')).name]" },
+          "NSGName": { "value": "[variables('portalNsgName')]" },
+          "SubnetRef" : "[variables('SubnetRef')]"
+
         }
       }
     },
