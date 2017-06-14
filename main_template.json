@@ -36,7 +36,7 @@
     }
   },
   "variables": {
-    "templateRepo": "https://github.com/QualiSystems/Azure-POC-Template",
+    "templateRepo": "https://raw.githubusercontent.com/QualiSystems/Azure-POC-Template/master/",
     "infraTemplateName": "infrastructure.json",
     "windowsComputeTemplateName": "base_windows_compute.json",
     "location": "[resourceGroup().location]",
