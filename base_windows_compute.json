@@ -38,7 +38,7 @@
     },
     "NSGName": {
       "type": "string",
-      "default": "defaultNsg",
+      "defaultValue": "defaultNsg",
       "metadata": {
         "description": "Vm Size to use"
       }
