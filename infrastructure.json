@@ -152,5 +152,9 @@
 
   ],
   "outputs": {
+    "vnetId" :{
+      "value" : "[reference(resourceId('Microsoft.Network/virtualNetworks',parameters('VNetName')))]",
+      "type" : "string"
+    }
   }
 }

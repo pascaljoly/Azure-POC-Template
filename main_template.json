@@ -52,8 +52,8 @@
     "qx_template_location": "https://s3.amazonaws.com/quali-prod-binaries/8.0.0-163004/Azure-Template/",
     "qualixscriptUrl": "https://s3.amazonaws.com/quali-prod-binaries/guacamole-quali-install.sh",
     "commandToExe": "sh guacamole-quali-install.sh",
-    "vmSize": "Standard_D4_v2",
-    "qualiVMSize": "Standard_A2",
+    "vmSize": "Standard_DS2_v2",
+    "qualiVMSize": "Standard_DS2_v2",
     "publicIpAddressNameQualiVM": "quali_ip",
     "defaultNSGName": "NSG-Quali",
     "portalNsgName": "NSG-Portal",
@@ -77,12 +77,12 @@
         "parameters": {
           "adminUsername": { "value": "[parameters('CloudShellVMsAdminUser')]" },
           "adminPassword": { "value": "[parameters('CloudShellVMsAdminPassword')]" },
-          "virtualNetworks_mgmt_vnet_name": { "value": "[reference(variables('mgmtVNetFullName')).name]" },
-          "storageAccountName": { "value": "[reference(variables('storageAccountFullName')).name]" },
+          "virtualNetworks_mgmt_vnet_name": { "value": "[variables('mgmtVNetFullName')]" },
+          "storageAccountName": { "value": "[variables('storageAccountFullName')]" },
           "storageBlob": {
             "value": "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]"
           },
-          "SubnetRef": { "value": "[variables('SubnetRef').name]" },
+          "SubnetRef": { "value": "[concat(reference('infraDeployment').outputs.vnetId.value,'/subnets/','default')]" },
           "scriptUrl": { "value": "[variables('qualixscriptUrl')]" },
           "commandToExe": { "value": "[variables('commandToExe')]" },
           "vmSize": { "value": "[variables('qualiVMSize')]" }
@@ -119,6 +119,8 @@
       "name": "qualiServerDeployment",
       "type": "Microsoft.Resources/deployments",
       "dependsOn": [
+          "[concat('Microsoft.Resources/deployments/', 'infraDeployment')]"
+
         ],
       "properties": {
         "mode": "Incremental",
@@ -132,7 +134,7 @@
           "SSHUser": { "value": "[parameters('CloudShellVMsAdminUser')]" },
           "SSHPassword": { "value": "[parameters('CloudShellVMsAdminPassword')]" },
           "VMSize": { "value": "[variables('vmSize')]" },
-          "VNetName": { "value": "[reference(variables('mgmtVNetFullName')).name]" }
+          "VNetName": { "value": "[variables('virtualNetworks_mgmt_vnet_name')]" }
 
         }
       }
@@ -143,6 +145,8 @@
       "name": "qualiPortalDeployment",
       "type": "Microsoft.Resources/deployments",
       "dependsOn": [
+          "[concat('Microsoft.Resources/deployments/', 'infraDeployment')]"
+
       ],
       "properties": {
         "mode": "Incremental",
@@ -152,11 +156,11 @@
         },
         "parameters": {
           "VirtualMachineName": { "value": "[variables('virtualMachinePoName')]" },
-          "StorageAccount_Name": { "value": "[variables('storageAccountName')]" },
+          "StorageAccountName": { "value": "[variables('storageAccountName')]" },
           "SSHUser": { "value": "[parameters('CloudShellVMsAdminUser')]" },
           "SSHPassword": { "value": "[parameters('CloudShellVMsAdminPassword')]" },
           "VMSize": { "value": "[variables('vmSize')]" },
-          "VNetName": { "value": "[reference(variables('mgmtVNetFullName')).name]" },
+          "VNetName": { "value": "[variables('virtualNetworks_mgmt_vnet_name')]" },
           "NSGName": { "value": "[variables('portalNsgName')]" }
         }
       }
@@ -207,7 +211,7 @@
               "sourceAddressPrefix": "*",
               "destinationAddressPrefix": "*",
               "access": "Allow",
-              "priority": 1020,
+              "priority": 1022,
               "direction": "Inbound"
             }
           }
