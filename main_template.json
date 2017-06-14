@@ -109,10 +109,11 @@
           "ManagementVnetSubnetCIDR": { "value": "[parameters('ManagementVnetSubnetCIDR')]" },
           "MGMTVNetName": { "value": "[reference(variables('virtualNetworks_mgmt_vnet_name')).name]" },
           "SandboxVNetName": { "value": "[reference(variables('virtualNetworks_sandbox_vnet_name')).name]" },
-          "StorageAccountName": { "value": "[reference(variables('storageAccountName')(.name)]" }
+          "StorageAccountName": { "value": "[reference(variables('storageAccountName')).name]" }
 
-        }
+        
       }
+    }
     },
 
     {

@@ -120,7 +120,6 @@
       "apiVersion": "2016-09-01",
       "location": "[resourceGroup().location]",
       "dependsOn": [
-        "[concat('Microsoft.Network/virtualNetworks/', parameters('VNetName'))]",
         "[concat('Microsoft.Network/networkSecurityGroups/', parameters('NSGName'))]",
         "[concat('Microsoft.Network/publicIpAddresses/', variables('ipName'))]"
       ],
