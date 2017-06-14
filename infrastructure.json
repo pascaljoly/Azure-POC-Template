@@ -84,7 +84,7 @@
             "allowGatewayTransit": "false",
             "useRemoteGateways": "false",
             "remoteVirtualNetwork": {
-              "id": "[resourceId('Microsoft.Network/virtualNetworks',variables('MGMTVNetName'))]"
+              "id": "[resourceId('Microsoft.Network/virtualNetworks',parameters('MGMTVNetName'))]"
             }
           }
         }
