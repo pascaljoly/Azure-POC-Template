@@ -74,8 +74,8 @@
           "name": "[variables('vNet2').peeringName]",
           "location": "[resourceGroup().location]",
           "dependsOn": [
-            "[concat('Microsoft.Network/virtualNetworks/', variables('virtualNetworks_sandbox_vnet_name'))]",
-            "[concat('Microsoft.Network/virtualNetworks/', variables('virtualNetworks_mgmt_vnet_name'))]"
+            "[concat('Microsoft.Network/virtualNetworks/', parameters('SandboxVNetName'))]",
+            "[concat('Microsoft.Network/virtualNetworks/', parameters('MGMTVNetName'))]"
           ],
           "comments": "This is the peering from vNet Sandbox to vNet Management",
           "properties": {
@@ -84,7 +84,7 @@
             "allowGatewayTransit": "false",
             "useRemoteGateways": "false",
             "remoteVirtualNetwork": {
-              "id": "[resourceId('Microsoft.Network/virtualNetworks',variables('virtualNetworks_mgmt_vnet_name'))]"
+              "id": "[resourceId('Microsoft.Network/virtualNetworks',variables('MGMTVNetName'))]"
             }
           }
         }
