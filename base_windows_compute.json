@@ -42,7 +42,7 @@
       "metadata": {
         "description": "Vm Size to use"
       }
-    },
+    }
 
     
 
@@ -58,9 +58,9 @@
       "True": "[variables('defaultNSGName')]",
       "False": "[parameters('NSGName')]"
     },
-    "nsgNameActual" : "[variables('nsgNameMap')[variables('useDefaultNsg')]]",
+    "nsgNameActual" : "[variables('nsgNameMap')[string(variables('useDefaultNsg'))]]",
     "vnetID": "[resourceId('Microsoft.Network/virtualNetworks',parameters('VNetName'))]",
-    "SubnetRef": "[concat(variables('vnetID'),'/subnets/','default')]",
+    "SubnetRef": "[concat(variables('vnetID'),'/subnets/','default')]"
   
 
   },
@@ -109,7 +109,7 @@
       }
     },
     {
-      "name": "[variables('nicName')]",
+      "name": "[variables('ipName')]",
       "type": "Microsoft.Network/publicIPAddresses",
       "apiVersion": "2017-03-01",
       "location": "[resourceGroup().location]",
@@ -123,7 +123,7 @@
       "apiVersion": "2016-09-01",
       "location": "[resourceGroup().location]",
       "dependsOn": [
-        "[concat('Microsoft.Network/networkSecurityGroups/', parameters('NSGName'))]",
+        "[concat('Microsoft.Network/networkSecurityGroups/', variables('nsgNameActual'))]",
         "[concat('Microsoft.Network/publicIpAddresses/', variables('ipName'))]"
       ],
       "properties": {
