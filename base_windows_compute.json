@@ -122,7 +122,6 @@
       "apiVersion": "2016-09-01",
       "location": "[resourceGroup().location]",
       "dependsOn": [
-        "[concat('Microsoft.Network/networkSecurityGroups/', variables('nsgNameActual'))]",
         "[concat('Microsoft.Network/publicIpAddresses/', variables('ipName'))]"
       ],
       "properties": {
