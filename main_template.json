@@ -40,10 +40,6 @@
     "infraTemplateName": "infrastructure.json",
     "windowsComputeTemplateName": "base_windows_compute.json",
     "location": "[resourceGroup().location]",
-    "apiVersion": "2016-06-01",
-    "es_nic_name": "QualiESNic",
-    "cs_nic_name": "QualiCSNic",
-    "po_nic_name": "QualiPONic",
     "virtualNetworks_mgmt_vnet_name": "management_vnet",
     "virtualNetworks_sandbox_vnet_name": "sandbox_vnet",
     "virtualMachineCsName": "QualiCsVm",
@@ -57,6 +53,8 @@
     "publicIpAddressNameQualiVM": "quali_ip",
     "defaultNSGName": "NSG-Quali",
     "portalNsgName": "NSG-Portal",
+    "scriptName": "QualiX-Script",
+
     "storageAccountFullName" : "[concat('Microsoft.Storage/storageAccounts/', variables('storageAccountName'))]",
     "mgmtVNetFullName" : "[concat('Microsoft.Network/virtualNetworks/', variables('virtualNetworks_mgmt_vnet_name'))]"
   },
@@ -75,10 +73,15 @@
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
+          "storageAccountName": {
+            "value": "[variables('storageAccountName')]"
+          },
+          "scriptName": {
+            "value": "[variables('scriptName')]"
+          },
           "adminUsername": { "value": "[parameters('CloudShellVMsAdminUser')]" },
           "adminPassword": { "value": "[parameters('CloudShellVMsAdminPassword')]" },
           "virtualNetworks_mgmt_vnet_name": { "value": "[variables('mgmtVNetFullName')]" },
-          "storageAccountName": { "value": "[variables('storageAccountFullName')]" },
           "storageBlob": {
             "value": "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]"
           },

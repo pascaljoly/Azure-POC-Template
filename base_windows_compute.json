@@ -33,14 +33,14 @@
     "VNetName": {
       "type": "string",
       "metadata": {
-        "description": "Vm Size to use"
+        "description": "Name of the VNET this vm will launch in"
       }
     },
     "NSGName": {
       "type": "string",
       "defaultValue": "defaultNsg",
       "metadata": {
-        "description": "Vm Size to use"
+        "description": "Security group to assign to the VM"
       }
     }
 
