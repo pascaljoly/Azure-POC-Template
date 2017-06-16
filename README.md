@@ -21,8 +21,8 @@ As seen in the above diagram this template will create the following elements in
 3. CloudShell Management Storage
 4. CloudShell Management Resource Group
 4. CloudShell Management Security Group
-5. Windows VM (default A-3)for the following products (installed separately): CloudShell Portal, Quali server, Execution Server, CloudShell DB
-6. Linux VM (default A-2) for the following product: QualiX
+5. Windows VM (default DS4_v2)for the following products (installed separately): CloudShell Portal, Quali server (including Execution Server and CloudShell DB)
+6. Linux VM (default DS2_v2) for the following product: QualiX
 5. CloudShell Sandboxes VNET
 6. Peering between the CloudShell Sandboxes VNET and the CloudShell Management VNET
 
