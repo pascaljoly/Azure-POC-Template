@@ -56,13 +56,13 @@
       },
       "properties": {
         "addressSpace": {
-          "addressPrefixes": [ "10.0.0.0/8" ]
+          "addressPrefixes": [ "10.159.0.0/16" ]
         },
         "subnets": [
           {
             "name": "default",
             "properties": {
-              "addressPrefix": "10.0.0.0/24"
+              "addressPrefix": "10.159.0.0/24"
             }
           }
         ]
