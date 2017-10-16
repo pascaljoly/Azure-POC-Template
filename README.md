@@ -42,7 +42,7 @@ During the Azure configuration process you'll obtain a **tenant** and a **secret
 
 Please follow the link below for detailed configuration instructions:
 
-<a href="http://help.quali.com/Online%20Help/8.0.0.7003/Portal/Content/Admn/Azure-Cnfg-API.htm" target="_blank">Configure Azure API to work with CloudShell (CloudShell 8.0 EA Online Help)</a>
+<a href="http://help.quali.com/Online%20Help/8.0.0.7489/DRB/Content/Admn/Azure-Cnfg-API.htm" target="_blank">Configure Azure API to work with CloudShell (CloudShell 8.0 EA Online Help)</a>
 
 ### CloudShell Installation
 
